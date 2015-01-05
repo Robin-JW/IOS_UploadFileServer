@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>D997F2E0-DC92-4B2C-84F2-52FEBF0DE7BD</string>
+	<key>IDESourceControlProjectName</key>
+	<string>IOS_UploadFileServer</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>86D8AD6CD4E59074E5ACECAA683D2CE00F48B19C</key>
+		<string>https://git.oschina.net/gejw0623/IOS_UploadFileServer.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>IOS_UploadFileServer.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>86D8AD6CD4E59074E5ACECAA683D2CE00F48B19C</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://git.oschina.net/gejw0623/IOS_UploadFileServer.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>86D8AD6CD4E59074E5ACECAA683D2CE00F48B19C</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>86D8AD6CD4E59074E5ACECAA683D2CE00F48B19C</string>
+			<key>IDESourceControlWCCName</key>
+			<string>IOS_UploadFileServer</string>
+		</dict>
+	</array>
+</dict>
+</plist>

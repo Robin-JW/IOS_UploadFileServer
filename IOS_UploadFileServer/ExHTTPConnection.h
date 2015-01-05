@@ -3,7 +3,7 @@
 
 @class MultipartFormDataParser;
 
-@interface MyHTTPConnection : HTTPConnection  {
+@interface ExHTTPConnection : HTTPConnection  {
     MultipartFormDataParser*        parser;
 	NSFileHandle*					storeFile;
 	

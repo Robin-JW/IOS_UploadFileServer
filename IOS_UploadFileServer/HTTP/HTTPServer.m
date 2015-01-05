@@ -3,6 +3,8 @@
 #import "HTTPConnection.h"
 #import "WebSocket.h"
 #import "HTTPLogging.h"
+#include <ifaddrs.h>
+#include <arpa/inet.h>
 
 #if ! __has_feature(objc_arc)
 #warning This file must be compiled with ARC. Use -fobjc-arc flag (or convert project to ARC).
@@ -397,11 +399,41 @@ static const int httpLogLevel = HTTP_LOG_LEVEL_INFO; // | HTTP_LOG_FLAG_TRACE;
 	
 }
 
+- (NSString *)getIPAddress {
+    NSString *address = @"error";
+    struct ifaddrs *interfaces = NULL;
+    struct ifaddrs *temp_addr = NULL;
+    int success = 0;
+    
+    // retrieve the current interfaces - returns 0 on success
+    success = getifaddrs(&interfaces);
+    if (success == 0) {
+        // Loop through linked list of interfaces
+        temp_addr = interfaces;
+        while (temp_addr != NULL) {
+            if( temp_addr->ifa_addr->sa_family == AF_INET) {
+                // Check if interface is en0 which is the wifi connection on the iPhone
+                if ([[NSString stringWithUTF8String:temp_addr->ifa_name] isEqualToString:@"en0"]) {
+                    // Get NSString from C String
+                    address = [NSString stringWithUTF8String:inet_ntoa(((struct sockaddr_in *)temp_addr->ifa_addr)->sin_addr)];
+                }
+            }
+            
+            temp_addr = temp_addr->ifa_next;
+        }
+    }
+    
+    // Free memory
+    freeifaddrs(interfaces);
+    
+    return address;
+}
+
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 #pragma mark Server Control
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-- (BOOL)start:(NSError **)errPtr
+- (BOOL)start:(NSError **)errPtr port:(void (^)(NSString *, uint16_t))portBlock
 {
 	HTTPLogTrace();
 	
@@ -414,7 +446,7 @@ static const int httpLogLevel = HTTP_LOG_LEVEL_INFO; // | HTTP_LOG_FLAG_TRACE;
 		if (success)
 		{
 			HTTPLogInfo(@"%@: Started HTTP server on port %hu", THIS_FILE, [asyncSocket localPort]);
-			
+            portBlock([self getIPAddress] ,[asyncSocket localPort]);
 			isRunning = YES;
 			[self publishBonjour];
 		}

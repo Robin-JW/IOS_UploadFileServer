@@ -40,7 +40,7 @@
 		CEB3B6101A59725B00936E0B /* ContextFilterLogFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = CEB3B6071A59725B00936E0B /* ContextFilterLogFormatter.m */; };
 		CEB3B6111A59725B00936E0B /* DispatchQueueLogFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = CEB3B6091A59725B00936E0B /* DispatchQueueLogFormatter.m */; };
 		CEB3B6121A59725B00936E0B /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = CEB3B60A1A59725B00936E0B /* README.txt */; };
-		CEB3B6151A59726B00936E0B /* MyHTTPConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = CEB3B6141A59726B00936E0B /* MyHTTPConnection.m */; };
+		CEB3B6151A59726B00936E0B /* ExHTTPConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = CEB3B6141A59726B00936E0B /* ExHTTPConnection.m */; };
 		CEB3B6181A5972DE00936E0B /* Web in Resources */ = {isa = PBXBuildFile; fileRef = CEB3B6171A5972DE00936E0B /* Web */; };
 /* End PBXBuildFile section */
 
@@ -121,8 +121,8 @@
 		CEB3B6081A59725B00936E0B /* DispatchQueueLogFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DispatchQueueLogFormatter.h; sourceTree = "<group>"; };
 		CEB3B6091A59725B00936E0B /* DispatchQueueLogFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DispatchQueueLogFormatter.m; sourceTree = "<group>"; };
 		CEB3B60A1A59725B00936E0B /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
-		CEB3B6131A59726B00936E0B /* MyHTTPConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyHTTPConnection.h; sourceTree = "<group>"; };
-		CEB3B6141A59726B00936E0B /* MyHTTPConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyHTTPConnection.m; sourceTree = "<group>"; };
+		CEB3B6131A59726B00936E0B /* ExHTTPConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExHTTPConnection.h; sourceTree = "<group>"; };
+		CEB3B6141A59726B00936E0B /* ExHTTPConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExHTTPConnection.m; sourceTree = "<group>"; };
 		CEB3B6171A5972DE00936E0B /* Web */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Web; path = IOS_UploadFileServer/Web; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -172,8 +172,8 @@
 				CEB3B5E41A59721B00936E0B /* TCP */,
 				CEB3B5991A59719B00936E0B /* AppDelegate.h */,
 				CEB3B59A1A59719B00936E0B /* AppDelegate.m */,
-				CEB3B6131A59726B00936E0B /* MyHTTPConnection.h */,
-				CEB3B6141A59726B00936E0B /* MyHTTPConnection.m */,
+				CEB3B6131A59726B00936E0B /* ExHTTPConnection.h */,
+				CEB3B6141A59726B00936E0B /* ExHTTPConnection.m */,
 				CEB3B59F1A59719B00936E0B /* Main.storyboard */,
 				CEB3B5A21A59719B00936E0B /* Images.xcassets */,
 				CEB3B5A41A59719B00936E0B /* LaunchScreen.xib */,
@@ -443,7 +443,7 @@
 				CEB3B60C1A59725B00936E0B /* DDASLLogger.m in Sources */,
 				CEB3B5F51A59721B00936E0B /* HTTPFileResponse.m in Sources */,
 				CEB3B5EE1A59721B00936E0B /* MultipartFormDataParser.m in Sources */,
-				CEB3B6151A59726B00936E0B /* MyHTTPConnection.m in Sources */,
+				CEB3B6151A59726B00936E0B /* ExHTTPConnection.m in Sources */,
 				CEB3B60E1A59725B00936E0B /* DDLog.m in Sources */,
 				CEB3B5EF1A59721B00936E0B /* MultipartMessageHeader.m in Sources */,
 				CEB3B5E71A59721B00936E0B /* DDData.m in Sources */,
@@ -652,6 +652,7 @@
 				CEB3B5B71A59719B00936E0B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CEB3B5B81A59719B00936E0B /* Build configuration list for PBXNativeTarget "IOS_UploadFileServerTests" */ = {
 			isa = XCConfigurationList;
@@ -660,6 +661,7 @@
 				CEB3B5BA1A59719B00936E0B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

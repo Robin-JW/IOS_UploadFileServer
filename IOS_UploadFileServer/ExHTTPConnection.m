@@ -1,5 +1,5 @@
 
-#import "MyHTTPConnection.h"
+#import "ExHTTPConnection.h"
 #import "HTTPMessage.h"
 #import "HTTPDataResponse.h"
 #import "DDNumber.h"
@@ -19,7 +19,7 @@ static const int httpLogLevel = HTTP_LOG_LEVEL_VERBOSE; // | HTTP_LOG_FLAG_TRACE
  * All we have to do is override appropriate methods in HTTPConnection.
  **/
 
-@implementation MyHTTPConnection
+@implementation ExHTTPConnection
 
 - (BOOL)supportsMethod:(NSString *)method atPath:(NSString *)path
 {
