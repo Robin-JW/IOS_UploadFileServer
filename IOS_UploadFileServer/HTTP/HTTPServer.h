@@ -184,7 +184,7 @@
  *     NSLog(@"Error starting http server: %@", err);
  * }
 **/
-- (BOOL)start:(NSError **)errPtr port:(void(^)(NSString *ip ,uint16_t port))port;
+- (BOOL)start:(NSError **)errPtr port:(void(^)(NSString *ip ,NSString *port))port;
 
 /**
  * Stops the server, preventing it from accepting any new connections.

@@ -70,8 +70,8 @@ static const int ddLogLevel = LOG_LEVEL_VERBOSE;
     NSError *error = nil;
     
     
-    if(![httpServer start:&error port:^(NSString *ip, uint16_t port) {
-        label.text = [NSString stringWithFormat:@"http://%@:%hu", ip, port];
+    if(![httpServer start:&error port:^(NSString *ip, NSString *port) {
+        label.text = [NSString stringWithFormat:@"http://%@:%@", ip, port];
     }])
     {
         DDLogError(@"Error starting HTTP Server: %@", error);

@@ -433,7 +433,7 @@ static const int httpLogLevel = HTTP_LOG_LEVEL_INFO; // | HTTP_LOG_FLAG_TRACE;
 #pragma mark Server Control
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-- (BOOL)start:(NSError **)errPtr port:(void (^)(NSString *, uint16_t))portBlock
+- (BOOL)start:(NSError **)errPtr port:(void (^)(NSString *, NSString *))portBlock
 {
 	HTTPLogTrace();
 	
@@ -446,7 +446,7 @@ static const int httpLogLevel = HTTP_LOG_LEVEL_INFO; // | HTTP_LOG_FLAG_TRACE;
 		if (success)
 		{
 			HTTPLogInfo(@"%@: Started HTTP server on port %hu", THIS_FILE, [asyncSocket localPort]);
-            portBlock([self getIPAddress] ,[asyncSocket localPort]);
+            portBlock([self getIPAddress], [NSString stringWithFormat:@"%i", [asyncSocket localPort]]);
 			isRunning = YES;
 			[self publishBonjour];
 		}
